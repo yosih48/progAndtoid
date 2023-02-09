@@ -31,10 +31,15 @@ class Home extends StatelessWidget {
     appBar: AppBar(
       title: const Text('data'),
     ),
-body:  const Center(
-  child: Text('home'),
-),
-  );
+body:  ListView.builder(itemBuilder: (context,index){
+    return ListTile(
+    title: Text('Item $index'),
+    subtitle: const Text('data'),
+    leading: const Icon(Icons.ac_unit),
+    );
+
+
+    }));
   }
 }
 
